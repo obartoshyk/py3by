@@ -1,13 +1,12 @@
 <odoo>
   <data>
-    <record model="ir.ui.view" id="py3by.list">
-      <field name="name">py3by list</field>
-      <field name="model">py3by.py3by</field>
+      <record model="ir.ui.view" id="py3by_recordpu3_form">
+      <field name="name">py3by.recordpu3.form</field>
+      <field name="model">py3by.recordpu3</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="first_name"/>
+          <field name="family_name"/>
         </tree>
       </field>
     </record>
@@ -15,17 +14,18 @@
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="py3by.action_window">
+    <record model="ir.actions.act_window" id="py3by_recordpu3_action_window">
       <field name="name">py3by window</field>
-      <field name="res_model">py3by.py3by</field>
+      <field name="res_model">py3by.recordpu3</field>
       <field name="view_mode">tree,form</field>
     </record>
 
 
     <!-- server action to the one above -->
-    <record model="ir.actions.server" id="py3by.action_server">
+  <!--
+    <record model="ir.actions.server" id="record_pu3.action_server">
       <field name="name">py3by server</field>
-      <field name="model_id" ref="model_py3by_py3by"/>
+      <field name="model_id" ref="model_py3by_record_pu3"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -35,23 +35,25 @@
         }
       </field>
     </record>
-
+  -->
 
     <!-- Top menu item -->
 
-    <menuitem name="py3by" id="py3by.menu_root"/>
+    <menuitem name="py3by" id="py3by_menu_root" groups="base.group_user"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="py3by.menu_1" parent="py3by.menu_root"/>
-    <menuitem name="Menu 2" id="py3by.menu_2" parent="py3by.menu_root"/>
-
+   <menuitem name="Menu 1" id="py3by_menu_1" parent="py3by_menu_root" groups="base.group_user"/>
+  <!--   <menuitem name="Menu 2" id="py3by.menu_2" parent="py3by.menu_root"/>
+-->
     <!-- actions -->
 
-    <menuitem name="List" id="py3by.menu_1_list" parent="py3by.menu_1"
-              action="py3by.action_window"/>
-    <menuitem name="Server to list" id="py3by" parent="py3by.menu_2"
-              action="py3by.action_server"/>
+    <menuitem name="List" id="py3by_menu_1_list" parent="py3by_menu_1"
+              action="py3by_recordpu3_action_window" groups="base.group_user"/>
 
+   <!--
+    <menuitem name="Server to list" id="py3by" parent="py3by.menu_2"
+              action="record_pu3.action_server"/>
+-->
   </data>
 </odoo>

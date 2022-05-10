@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_py3by_py3by,py3by.py3by,model_py3by_py3by,base.group_user,1,1,1,1
+access_py3by_recordpu3,py3by.recordpu3,model_py3by_recordpu3,base.group_user,1,1,1,1

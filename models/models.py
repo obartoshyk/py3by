@@ -3,16 +3,21 @@
 from odoo import models, fields, api
 
 
-class py3by(models.Model):
-     _name = 'py3by.py3by'
-     _description = 'py3by.py3by'
+class recordpu3(models.Model):
+     _name = 'py3by.recordpu3'
+     _description = 'py3by.recordpu3'
 
-     name = fields.Char()
+     first_name = fields.Char()
+     second_name = fields.Char()
+     family_name = fields.Char()
+     person_id = fields.Char()
+
      value = fields.Integer()
-     value2 = fields.Float(compute="_value_pc", store=True)
-     description = fields.Text()
-
+#     value2 = fields.Float(compute="_value_pc", store=True)
+#     description = fields.Text()
+"""
      @api.depends('value')
      def _value_pc(self):
          for record in self:
              record.value2 = float(record.value) / 100
+"""

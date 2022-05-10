@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
-
+"""
 class Py3by(http.Controller):
      @http.route('/py3by/py3by', auth='public')
      def index(self, **kw):
@@ -19,3 +19,4 @@ class Py3by(http.Controller):
          return http.request.render('py3by.object', {
               'object': obj
           })
+"""
