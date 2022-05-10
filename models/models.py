@@ -13,7 +13,7 @@ class recordpu3(models.Model):
      person_id = fields.Char()
 
      value = fields.Integer()
-     #test py 7 j,k
+     #test py 7 j,kttt
 
 
 #     value2 = fields.Float(compute="_value_pc", store=True)
